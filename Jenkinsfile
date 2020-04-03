@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage ("--Deploy WarFile---") {
 			steps {
-				bat "copy taget\\MavenWeb.war D:\\LPH_Learning\\Installed_Soft\\Tomcat_Jenkins\\webapps\\"
+				bat "copy target\\MavenWeb.war D:\\LPH_Learning\\Installed_Soft\\Tomcat_Jenkins\\webapps\\"
 			}
 		}
 	}
