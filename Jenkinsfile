@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage ("--Deploy WarFile---") {
 			steps {
-				bat "copy target\\MavenWeb.war D:\\InstallSoft\Devops\\Devops\\"
+				bat "copy target\\MavenWeb.war D:\\InstallSoft\\Devops\\"
 			}
 		}
 	}
