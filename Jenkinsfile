@@ -4,7 +4,6 @@ pipeline {
 		stage ("--Clean Project---") {
 			steps {
 				bat "mvn clean"
-				bat "mvn sonar.sonar"
 			}
 		}
 		stage ("--Create WarFile---") {
