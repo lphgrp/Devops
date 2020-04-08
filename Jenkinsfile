@@ -8,9 +8,8 @@ pipeline {
 		}
 		stage ("----Code Coverage---")
 		steps {
-		def scannerhome = tool 'SonarScanner';
-				withSonarQubeEnv('Sonar_Qube') {
-				  bat "${scannerHome}/bin/sonar-scanner"
+				withSonarQubeEnv('Sonar_Analysis') {
+				  bat "D:\\InstallSoft\\sonar-scanner-4.2.0.1873-windows\\bin\\sonar-scanner"
 				}
 			}
 		
