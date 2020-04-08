@@ -6,6 +6,14 @@ pipeline {
 				bat "mvn clean"
 			}
 		}
+		stage ("----Code Coverage---")
+		steps {
+		def scannerhome = tool 'SonarScanner';
+				withSonarQubeEnv('Sonar_Qube') {
+				  bat "${scannerHome}/bin/sonar-scanner"
+				}
+			}
+		
 		stage ("--Create WarFile---") {
 			steps {
 				bat "mvn package"
